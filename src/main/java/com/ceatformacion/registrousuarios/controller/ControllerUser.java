@@ -27,4 +27,10 @@ public class ControllerUser {
         return "crud";
     }
 
+    @GetMapping("/crud")
+    public String verUsuarios(Model model){
+        // Pasamos la lista de usuarios a la vista
+        model.addAttribute("usuarios", ListaUsuarios);
+        return "crud"; // Nombre de la vista para mostrar los usuarios
+    }
 }
