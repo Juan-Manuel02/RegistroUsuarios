@@ -76,12 +76,12 @@ public class Usuario {
         this.idUsuario = idUsuario;
     }
 
-    public LocalDate getFechaRegistro() {
-        return fechaRegistro;
+    public String getFechaRegistro() {
+        return String.valueOf(this.fechaRegistro);
     }
 
-    public void setFechaRegistro(LocalDate fechaRegistro) {
-        this.fechaRegistro = fechaRegistro;
+    public void setFechaRegistro(String fechaRegistro) {
+        this.fechaRegistro = LocalDate.parse(fechaRegistro);
     }
 
     // To String
